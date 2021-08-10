@@ -7,12 +7,12 @@ import (
 	"github.com/sap4001/episode-parser/internal/server"
 )
 
-const LISTEN_PORT = 8080
+const LISTEN_PORT = 80
 
 func main() {
 
 	server := server.NewServer(LISTEN_PORT)
-	log.Println("Starting HTTP Server on: ", LISTEN_PORT)
+	log.Println("Starting HTTP Server on port: ", LISTEN_PORT)
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatalf("main: unexpected error in ListenAndServe: %v", err)
 	}
