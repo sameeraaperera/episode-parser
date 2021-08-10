@@ -18,6 +18,7 @@ func NewServer(port int) *http.Server {
 			"server_time": time.Now().String(),
 		})
 	})
+	router.GET("/parse", JSONParser())
 
 	listenPort := fmt.Sprintf(":%d", port)
 
