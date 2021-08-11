@@ -9,6 +9,15 @@ import (
 )
 
 func NewServer(port int) *http.Server {
+
+	listenPort := fmt.Sprintf(":%d", port)
+	return &http.Server{
+		Addr:    listenPort,
+		Handler: SetupRouter(),
+	}
+}
+
+func SetupRouter() *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
@@ -18,11 +27,5 @@ func NewServer(port int) *http.Server {
 		})
 	})
 	router.POST("/parse", JSONParser)
-
-	listenPort := fmt.Sprintf(":%d", port)
-
-	return &http.Server{
-		Addr:    listenPort,
-		Handler: router,
-	}
+	return router
 }

@@ -43,5 +43,4 @@ func JSONParser(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, output)
-
 }
