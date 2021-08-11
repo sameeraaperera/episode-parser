@@ -14,7 +14,6 @@ func Test_IsDRMEnabledTrue(t *testing.T) {
 	}
 	got := episode.IsDRMEnabled(show)
 	assert.True(t, got)
-
 }
 
 func Test_IsDRMEnabledFalse(t *testing.T) {
@@ -31,5 +30,4 @@ func Test_IsDRMEnabledFalse(t *testing.T) {
 	}
 	got = episode.IsDRMEnabled(show2)
 	assert.False(t, got)
-
 }

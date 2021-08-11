@@ -24,7 +24,7 @@ func getListenPort() int {
 	}
 	i, err := strconv.Atoi(port)
 	if err != nil {
-		log.Fatal("main: error parsing port: ", err)
+		log.Fatalf("main: error parsing port: %v", err)
 	}
 	return i
 }
