@@ -8,8 +8,6 @@ import (
 	"github.com/sap4001/episode-parser/internal/server"
 )
 
-const LISTEN_PORT = 80
-
 func main() {
 	port := getListenPort()
 	server := server.NewServer(port)

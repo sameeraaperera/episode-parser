@@ -9,7 +9,6 @@ import (
 )
 
 func NewServer(port int) *http.Server {
-
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
@@ -18,7 +17,7 @@ func NewServer(port int) *http.Server {
 			"server_time": time.Now().String(),
 		})
 	})
-	router.GET("/parse", JSONParser())
+	router.POST("/parse", JSONParser())
 
 	listenPort := fmt.Sprintf(":%d", port)
 
