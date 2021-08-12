@@ -4,5 +4,5 @@ build:
 run:
 	go run cmd/main.go
 
-test: ## Runs the tests and higlights race conditions
-	go test ./...
+test: ## Runs the tests
+	go test -v ./...

@@ -14,6 +14,12 @@ From the root directory run
 make run
 ```
 &nbsp;
+## Running the tests
+From the root directory run
+```
+make test
+```
+&nbsp;
 ## Sample Usage
 
 ```

@@ -9,7 +9,6 @@ import (
 )
 
 func NewServer(port int) *http.Server {
-
 	listenPort := fmt.Sprintf(":%d", port)
 	return &http.Server{
 		Addr:    listenPort,
